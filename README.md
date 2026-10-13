@@ -9,6 +9,45 @@ what a board is for.
 - Done empties itself: a week after a task is finished, it goes.
 - Everyone starts with a board named after them.
 
+## Using it
+
+A board is picked from a dropdown that is also where you make one, and has
+three lanes: To Do, Doing, Done. A task's detail and its `- [ ]` subtasks
+are its Markdown body, the same thing the editor already knows how to
+write and tick. Done empties itself — a task is deleted a week after it got
+there, and every card says how long it has left — so the lane stays what
+you finished recently rather than everything you ever finished.
+
+**Working a board:**
+
+#### In the web app
+
+The **Tasks** tab: the board from the dropdown, its three lanes, and the
+plus beside the title for a new task. Drag a card between lanes with the
+mouse, or with a finger; tap one for its sheet, where **Duplicate** puts a
+copy in To Do. **Clear Done now** is on the board's sheet.
+
+#### In the terminal app
+
+The **Tasks** card (`f2`): `ctrl+n` makes a task in To Do, `[` and `]`
+move the one under the cursor between lanes, `enter` opens its sheet,
+`ctrl+b` makes a board, and the toolbar renames or deletes the one shown.
+
+#### On the command line
+
+```
+cm tasks list                              # the board, lane by lane
+cm tasks add "Repot the fig" due=2026-10-01
+cm tasks done fig                          # by the start of its id, or its title
+cm tasks move 8f2c doing
+cm tasks groups                            # the boards
+cm tasks list -g Garden                    # another board
+cm tasks duplicate 8f2c
+cm tasks clear-done
+```
+
+---
+
 ## What it adds to your Cloudmorrow
 
 | | |

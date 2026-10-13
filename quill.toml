@@ -1,7 +1,7 @@
 [quill]
 id = "tasks"
 name = "Tasks"
-version = "1.2.0"
+version = "1.2.1"
 summary = "Boards with three lanes: To Do, Doing, Done."
 category = "personal"
 icon = "tasks"
